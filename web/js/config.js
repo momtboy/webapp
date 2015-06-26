@@ -17,7 +17,7 @@
             'jquery' : 'lib/js/core/jquery/jquery-1.11.3.min',
             'angular' : 'lib/js/core/angular/angular',
             'template' : 'lib/js/core/arttemplate/template',
-            'hoverFn' : 'lib/js/core/jquery/jquery.hoverFn'
+            'jquery.hoverFn' : 'lib/js/core/jquery/jquery.hoverFn'
         },
         urlArgs: "time=" + (new Date()).getTime()  //防止读取缓存，调试用
     };

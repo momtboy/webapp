@@ -37,11 +37,15 @@
 <script type="text/javascript" src="../lib/js/requirejs2.1.11.js"></script>
 <script type="text/javascript" src="js/config.js"></script>
 <script>
-    requirejs(['jquery','angular','web/js/common/index'],function($,angular,node){
+    requirejs(['jquery','angular','web/js/common/index','jquery.hoverFn'],function($,angular,node){
         node.fromAjax();
+
         //手动启动angularjs
         angular.bootstrap(document,['myApp']);
+
         //node.loadListModle();
+
+        $('#list').hoverFn();
     });
 </script>
 </body>
