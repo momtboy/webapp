@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2015/6/18.
  */
-define(['jquery','template','trans/config'],function($, $template,$url){
+define(['jquery','template','angular'],function($, $template,angular){
 
     //缓存
     var nodes = {
@@ -13,8 +13,7 @@ define(['jquery','template','trans/config'],function($, $template,$url){
         if(nodes.btn.length > 0){
             nodes.btn.on('click',function(e){
                  e.preventDefault();
-
-                alert('111');
+                 alert('111');
              });
         }
     };
@@ -36,8 +35,14 @@ define(['jquery','template','trans/config'],function($, $template,$url){
             }
         ];
         document.getElementById("listModel").innerHTML = $template('tpl:listModel',{result:persons});
-        alert($url);
     })();
+
+
+    //angularjs
+    var app = angular.module("myApp",[]);
+    app.controller("ctrlLogin",function($scope){
+        $scope.name = "ketty" ;
+    });
 
 
     return {
