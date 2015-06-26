@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style type="text/css">
+        #list{width: 200px;height: 200px;background: red;}
+    </style>
+</head>
+
+<body>
+
+
+<div id="list">
+    这是测试用例
+</div>
+<br/>
+
+<button id="btn">点击提交</button>
+
+<div id="listModel">
+
+</div>
+
+<script id="tpl:listModel" type="text/html">
+    <ul>
+        {{each result as value i}}
+        <li>{{result[i].name}} -----------  {{result[i].age}}</li>
+        {{/each}}
+    </ul>
+</script>
+
+<script type="text/javascript" src="../lib/js/requirejs2.1.11.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
+<script>
+    requirejs(['jquery','web/js/common/index'],function($,node){
+        node.fromAjax();
+        //node.loadListModle();
+    });
+</script>
+</body>
+</html>

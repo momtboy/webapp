@@ -1,0 +1,10 @@
+widget: svn 按需引用lib/widget里面的组件
+common: 业务公共组件：数据接口配置，项目路径配置，模块通信
+    common/trans: 数据接口配置
+ui: 涉及到页面dom公共组件：消息弹层，地图。一般ui里的组件会引用widget,common
+third: 第三方插件
+comp: 页面上的模块组件：旅游列表块依赖拆分成的一些小功能（价格计算、优惠信息计算、列表数据请求）。一般会引用common,ui,third
+pl: 页面上各个模块最终的js。旅游列表块：list.js。一般引用comp
+page: 整个页面最总业务js。main.js:list1.js,list2.js。一般引用pl,comp
+
+一般来说，优化page文件夹下的js,还有可能也需要优化pl下。
